@@ -5,7 +5,7 @@
       "id": 0,
       "name": "csv-cli-tool",
       "prompt": "Python으로 CSV 파일을 읽어서 JSON으로 변환하는 CLI 도구를 만들어줘. 대용량 파일도 처리할 수 있어야 하고, 컬럼 필터링 기능도 있으면 좋겠어. 입력은 stdin 또는 파일 경로로 받고, 출력은 stdout으로. --columns 옵션으로 원하는 컬럼만 선택할 수 있어야 해. 1GB 이상의 CSV도 메모리 문제 없이 처리되어야 해.",
-      "expected_output": "PRD, 아키텍처, 구현(TDD), 리뷰, QA를 거친 완성된 CLI 도구와 테스트, 그리고 docs/forge/ 아래의 산출물 문서들",
+      "expected_output": "PRD, 아키텍처, 구현(TDD), 리뷰, QA를 거친 완성된 CLI 도구와 테스트, docs/forge/ 산출물, docs/plans/ 작업 이력",
       "files": [],
       "assertions": [
         {
@@ -47,6 +47,11 @@
           "id": "verification-coverage",
           "text": "[with-skill만] 아키텍처에서 정의한 검증 방법이 모두 테스트로 구현되어 있다",
           "type": "manual"
+        },
+        {
+          "id": "plans-created",
+          "text": "[with-skill만] docs/plans/<YYYYMMDD>-<태스크명>.md가 생성되고, docs/plans/index.md에 해당 항목이 추가되어 있다",
+          "type": "manual"
         }
       ]
     },
@@ -54,7 +59,7 @@
       "id": 1,
       "name": "todo-api",
       "prompt": "Express.js로 할일 관리 REST API를 만들어줘. 할일 CRUD, 우선순위 설정(high/medium/low), 마감일 필터링이 필요해. SQLite를 DB로 써줘. API 응답은 JSON 형태로. 에러 응답도 일관된 포맷으로 내려줘야 해.",
-      "expected_output": "PRD, 아키텍처, 구현(TDD), 리뷰, QA를 거친 완성된 REST API와 테스트, 그리고 docs/forge/ 아래의 산출물 문서들",
+      "expected_output": "PRD, 아키텍처, 구현(TDD), 리뷰, QA를 거친 완성된 REST API와 테스트, docs/forge/ 산출물, docs/plans/ 작업 이력",
       "files": [],
       "assertions": [
         {
@@ -101,6 +106,11 @@
           "id": "review-selective-acceptance",
           "text": "[with-skill만] revision-notes에 수용/거부 근거가 명시되어 있다",
           "type": "manual"
+        },
+        {
+          "id": "plans-created",
+          "text": "[with-skill만] docs/plans/<YYYYMMDD>-<태스크명>.md가 생성되고, docs/plans/index.md에 해당 항목이 추가되어 있다",
+          "type": "manual"
         }
       ]
     },
@@ -108,7 +118,7 @@
       "id": 2,
       "name": "notification-system",
       "prompt": "우리 프로젝트에 사용자 알림 시스템을 추가해줘. 이메일이랑 인앱 알림을 지원해야 하고, 사용자가 알림 종류별로 on/off 할 수 있어야 해. 알림 템플릿 시스템도 있으면 좋겠어. 기술 스택은 TypeScript + Node.js로.",
-      "expected_output": "PRD, 아키텍처, 구현(TDD), 리뷰, QA를 거친 완성된 알림 시스템과 테스트, 그리고 docs/forge/ 아래의 산출물 문서들",
+      "expected_output": "PRD, 아키텍처, 구현(TDD), 리뷰, QA를 거친 완성된 알림 시스템과 테스트, docs/forge/ 산출물, docs/plans/ 작업 이력",
       "files": [],
       "assertions": [
         {
@@ -154,6 +164,11 @@
         {
           "id": "review-selective-acceptance",
           "text": "[with-skill만] revision-notes에 수용/거부 근거가 명시되어 있다",
+          "type": "manual"
+        },
+        {
+          "id": "plans-created",
+          "text": "[with-skill만] docs/plans/<YYYYMMDD>-<태스크명>.md가 생성되고, docs/plans/index.md에 해당 항목이 추가되어 있다",
           "type": "manual"
         }
       ]
