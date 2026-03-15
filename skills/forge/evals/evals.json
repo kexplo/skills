@@ -1,0 +1,162 @@
+{
+  "skill_name": "forge",
+  "evals": [
+    {
+      "id": 0,
+      "name": "csv-cli-tool",
+      "prompt": "Python으로 CSV 파일을 읽어서 JSON으로 변환하는 CLI 도구를 만들어줘. 대용량 파일도 처리할 수 있어야 하고, 컬럼 필터링 기능도 있으면 좋겠어. 입력은 stdin 또는 파일 경로로 받고, 출력은 stdout으로. --columns 옵션으로 원하는 컬럼만 선택할 수 있어야 해. 1GB 이상의 CSV도 메모리 문제 없이 처리되어야 해.",
+      "expected_output": "PRD, 아키텍처, 구현(TDD), 리뷰, QA를 거친 완성된 CLI 도구와 테스트, 그리고 docs/forge/ 아래의 산출물 문서들",
+      "files": [],
+      "assertions": [
+        {
+          "id": "code-runnable",
+          "text": "Python CLI 도구가 실제로 실행 가능하고, 샘플 CSV를 JSON으로 변환할 수 있다",
+          "type": "manual"
+        },
+        {
+          "id": "tests-pass",
+          "text": "모든 테스트가 통과한다",
+          "type": "manual"
+        },
+        {
+          "id": "test-quality",
+          "text": "테스트가 실질적인 동작을 검증한다 (항상 통과하는 assertion, 하드코딩 기대값, 과도한 모킹이 없다)",
+          "type": "manual"
+        },
+        {
+          "id": "streaming-support",
+          "text": "대용량 파일 처리를 위한 스트리밍 방식이 구현되어 있다 (전체를 메모리에 로드하지 않음)",
+          "type": "manual"
+        },
+        {
+          "id": "column-filtering",
+          "text": "--columns 옵션으로 컬럼 필터링이 동작한다",
+          "type": "manual"
+        },
+        {
+          "id": "pipeline-completeness",
+          "text": "[with-skill만] prd.md, architecture.md, architecture-review.md, architecture-revision-notes.md, implementation-review.md, implementation-revision-notes.md, qa-report.md가 모두 존재한다",
+          "type": "manual"
+        },
+        {
+          "id": "review-selective-acceptance",
+          "text": "[with-skill만] revision-notes에 각 리뷰 항목의 수용/거부 근거가 명시되어 있다",
+          "type": "manual"
+        },
+        {
+          "id": "verification-coverage",
+          "text": "[with-skill만] 아키텍처에서 정의한 검증 방법이 모두 테스트로 구현되어 있다",
+          "type": "manual"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "name": "todo-api",
+      "prompt": "Express.js로 할일 관리 REST API를 만들어줘. 할일 CRUD, 우선순위 설정(high/medium/low), 마감일 필터링이 필요해. SQLite를 DB로 써줘. API 응답은 JSON 형태로. 에러 응답도 일관된 포맷으로 내려줘야 해.",
+      "expected_output": "PRD, 아키텍처, 구현(TDD), 리뷰, QA를 거친 완성된 REST API와 테스트, 그리고 docs/forge/ 아래의 산출물 문서들",
+      "files": [],
+      "assertions": [
+        {
+          "id": "code-runnable",
+          "text": "API 서버가 실제로 시작되고 요청을 처리할 수 있다",
+          "type": "manual"
+        },
+        {
+          "id": "tests-pass",
+          "text": "모든 테스트가 통과한다",
+          "type": "manual"
+        },
+        {
+          "id": "test-quality",
+          "text": "테스트가 실질적인 동작을 검증한다",
+          "type": "manual"
+        },
+        {
+          "id": "crud-complete",
+          "text": "할일 CRUD(생성, 조회, 수정, 삭제)가 모두 구현되어 있다",
+          "type": "manual"
+        },
+        {
+          "id": "priority-support",
+          "text": "우선순위(high/medium/low) 설정 및 필터링이 동작한다",
+          "type": "manual"
+        },
+        {
+          "id": "deadline-filtering",
+          "text": "마감일 기반 필터링이 구현되어 있다",
+          "type": "manual"
+        },
+        {
+          "id": "error-format",
+          "text": "에러 응답이 일관된 JSON 포맷으로 반환된다",
+          "type": "manual"
+        },
+        {
+          "id": "pipeline-completeness",
+          "text": "[with-skill만] 모든 파이프라인 산출물이 존재한다",
+          "type": "manual"
+        },
+        {
+          "id": "review-selective-acceptance",
+          "text": "[with-skill만] revision-notes에 수용/거부 근거가 명시되어 있다",
+          "type": "manual"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "notification-system",
+      "prompt": "우리 프로젝트에 사용자 알림 시스템을 추가해줘. 이메일이랑 인앱 알림을 지원해야 하고, 사용자가 알림 종류별로 on/off 할 수 있어야 해. 알림 템플릿 시스템도 있으면 좋겠어. 기술 스택은 TypeScript + Node.js로.",
+      "expected_output": "PRD, 아키텍처, 구현(TDD), 리뷰, QA를 거친 완성된 알림 시스템과 테스트, 그리고 docs/forge/ 아래의 산출물 문서들",
+      "files": [],
+      "assertions": [
+        {
+          "id": "code-runnable",
+          "text": "TypeScript 코드가 컴파일되고 실행 가능하다",
+          "type": "manual"
+        },
+        {
+          "id": "tests-pass",
+          "text": "모든 테스트가 통과한다",
+          "type": "manual"
+        },
+        {
+          "id": "test-quality",
+          "text": "테스트가 실질적인 동작을 검증한다",
+          "type": "manual"
+        },
+        {
+          "id": "email-notification",
+          "text": "이메일 알림 채널이 구현되어 있다",
+          "type": "manual"
+        },
+        {
+          "id": "inapp-notification",
+          "text": "인앱 알림 채널이 구현되어 있다",
+          "type": "manual"
+        },
+        {
+          "id": "preference-toggle",
+          "text": "사용자가 알림 종류별로 on/off 할 수 있는 설정 기능이 있다",
+          "type": "manual"
+        },
+        {
+          "id": "template-system",
+          "text": "알림 템플릿 시스템이 구현되어 있다",
+          "type": "manual"
+        },
+        {
+          "id": "pipeline-completeness",
+          "text": "[with-skill만] 모든 파이프라인 산출물이 존재한다",
+          "type": "manual"
+        },
+        {
+          "id": "review-selective-acceptance",
+          "text": "[with-skill만] revision-notes에 수용/거부 근거가 명시되어 있다",
+          "type": "manual"
+        }
+      ]
+    }
+  ]
+}
